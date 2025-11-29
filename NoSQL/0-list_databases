@@ -1,3 +1,5 @@
 // my comment
-printjson(db.adminCommand("listDatabases"))
+db.adminCommand("listDatabases").databases.forEach(function(d) {
+    print(d.name);
+});
 
